@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("RaceCondition")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("DeadLock")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("RaceCondition")]
-[assembly: System.Reflection.AssemblyTitleAttribute("RaceCondition")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c66b73787b64a43fafc97627d0dc7263dbddde1")]
+[assembly: System.Reflection.AssemblyProductAttribute("DeadLock")]
+[assembly: System.Reflection.AssemblyTitleAttribute("DeadLock")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
