@@ -11,7 +11,7 @@
 			threadOne.Start();
 			threadTwo.Start();
 			
-			Thread.Sleep(2000);
+			Thread.Sleep(3000);
 			Console.WriteLine($"Ожидаемый результат counter = 20000\nФактический результат counter = {_counter}");
 		}
 
