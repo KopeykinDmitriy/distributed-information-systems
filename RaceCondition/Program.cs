@@ -3,6 +3,7 @@
 	class Program
 	{
 		private static int _counter = 0;
+		private static object _lock = new();
 		static void Main(string[] args)
 		{
 			var threadOne = new Thread(IncreaseCounter);
@@ -18,7 +19,8 @@
 		private static void IncreaseCounter()
 		{
 			for (var i = 0; i < 10000; i++)
-				_counter++;
+				lock(_lock)
+					_counter++;
 		}
 	}
 }

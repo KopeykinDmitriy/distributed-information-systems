@@ -41,12 +41,12 @@
         {
             for (var i = 0; i < 10000; i++)
             {
-                lock (_lockTwo)
+                lock (_lockOne)
                 {
-                    _counterTwo++;
-                    lock (_lockOne)
+                    _counterOne++;
+                    lock (_lockTwo)
                     {
-                        _counterOne++;
+                        _counterTwo++;
                     }
                 }
             }
