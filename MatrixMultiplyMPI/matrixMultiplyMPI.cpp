@@ -126,7 +126,6 @@ int main(int argc, char* argv[])
         
     int elementsPerProcess = blockSize * N;
 
-    MPI_Bcast(A, N * N, MPI_INT, 0, MPI_COMM_WORLD);
     MPI_Bcast(B, N * N, MPI_INT, 0, MPI_COMM_WORLD);
 
     int* localA = new int[elementsPerProcess];
