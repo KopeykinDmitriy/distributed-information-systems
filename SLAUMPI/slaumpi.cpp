@@ -24,29 +24,6 @@ void back_step_gaussian_elimination() {
     }
 }
 
-void gaussian_elimination(double* a, double* x, int n) {
-    int i, j, k;
-    double ratio;
-    // Прямой ход метода Гаусса
-    for (i = 0; i < n - 1; i++) {
-        for (j = i + 1; j < n; j++) {
-            ratio = a[j * n + i] / a[i * n + i];
-            for (k = i; k < n + 1; k++) {
-                a[j * n + k] -= ratio * a[i * n + k];
-            }
-        }
-    }
-
-    // Обратный ход метода Гаусса
-    for (i = n - 1; i >= 0; i--) {
-        x[i] = a[i * n + n];
-        for (j = i + 1; j < n; j++) {
-            x[i] -= a[i * n + j] * x[j];
-        }
-        x[i] /= a[i * n + i];
-    }
-}
-
 void CheckAnswer() {
     double sum = 0;
     for (int i = 0; i < N; i++)
