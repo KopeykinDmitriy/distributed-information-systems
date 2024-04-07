@@ -1,8 +1,3 @@
-/// CPU: Intel Core i3 10105f, 4 Core/8 Threads, Cache L3 = 6,0 Mb
-/// row-col-inner = 149377 ms
-/// col-row-inner = 148823 ms
-/// row-inner-col = 9154 ms
-
 #include <fstream>
 #include <iostream>
 #include <vector>
@@ -11,10 +6,6 @@
 using namespace std;
 
 int N = 2400;
-
-//const int BLOCK_SIZE = 10; // Размер блока
-
-
 
 void get_matrices_from_files(int* A, int* B)
 {
@@ -126,7 +117,6 @@ int main(int argc, char* argv[])
         
     int elementsPerProcess = blockSize * N;
 
-    MPI_Bcast(A, N * N, MPI_INT, 0, MPI_COMM_WORLD);
     MPI_Bcast(B, N * N, MPI_INT, 0, MPI_COMM_WORLD);
 
     int* localA = new int[elementsPerProcess];
